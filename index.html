@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linux Commands Quiz — All 232 Commands</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Exo+2:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="sf"></div>
+<div id="gf"></div>
+
+<div class="wrap">
+
+  <!-- HEADER -->
+  <div class="hdr">
+    <div class="badge-lbl">🐧 Kali Linux · OS Lab · BS CS/IT — Part 3</div>
+    <h1 class="qtitle">LINUX COMMANDS<br>QUIZ</h1>
+    <h2 class="qsub ">The Shaikh Ayaz University Shikarpur &nbsp;·&nbsp; Department of CS &amp; IT</h2>
+  </div>
+
+  <!-- LIVE STATS -->
+  <div class="sbar" id="sbar" style="display:none">
+    <div class="spill"><span class="sd dc"></span>Q <span id="sq">1</span>/<span id="stot">232</span></div>
+    <div class="spill"><span class="sd dg"></span>✓ <span id="sc">0</span></div>
+    <div class="spill"><span class="sd dp"></span>✗ <span id="sw">0</span></div>
+    <div class="spill"><span class="sd" style="background:#a78bfa;color:#a78bfa;box-shadow:0 0 7px #a78bfa"></span><span id="sp">0%</span></div>
+  </div>
+
+  <!-- PROGRESS -->
+  <div class="pcon" id="pcon" style="display:none">
+    <div class="pinf"><span>PROGRESS</span><span id="ptxt">0 / 232</span></div>
+    <div class="ptrack"><div class="pfill" id="pfill" style="width:0%"></div></div>
+  </div>
+
+  <!-- INTRO -->
+  <div class="intro" id="intro">
+    <div class="icard">
+      <div class="iico">⚡</div>
+      <div class="ititle">COMPLETE LINUX COMMANDS QUIZ</div>
+      <p class="idesc">This quiz covers <strong style="color:var(--c)">all 232 Linux commands</strong> from your OS Lab document.
+        Each question tests a real command with 4 options. At least one option is always correct. Ready to prove your Linux mastery?</p>
+      <div class="ifeats">
+        <span class="ftag">⏱ 20 SEC / QUESTION</span>
+        <span class="ftag">232 QUESTIONS</span>
+        <span class="ftag">INSTANT FEEDBACK</span>
+        <span class="ftag">FULL REVIEW</span>
+        <span class="ftag">RANDOM ORDER</span>
+      </div>
+      <button class="bstart" onclick="startQuiz()"><span>LAUNCH QUIZ</span><span>▶</span></button>
+    </div>
+  </div>
+
+  <!-- QUIZ SCREEN -->
+  <div id="qscreen" style="width:100%;max-width:780px;display:none">
+    <div class="trow"><div class="tbadge" id="tbadge"><div class="tdot"></div><span id="td">20</span></div></div>
+    <div class="qcard" id="qcard">
+      <div class="qmeta"><span class="qnum" id="qnum">Q 001</span><span class="qcat" id="qcat">CATEGORY</span></div>
+      <div class="qtxt" id="qtxt"></div>
+      <div class="ogrid" id="ogrid"></div>
+      <div class="fb" id="fb"></div>
+      <button class="bnxt" id="bnxt" onclick="nextQ()"><span>NEXT</span><span>→</span></button>
+    </div>
+  </div>
+
+  <!-- RESULT -->
+  <div class="rscreen" id="rscreen">
+    <div class="rcard">
+      <svg width="0" height="0"><defs>
+        <linearGradient id="sg" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#bf00ff"/>
+          <stop offset="100%" stop-color="#00f5ff"/>
+        </linearGradient>
+      </defs></svg>
+      <div class="sring">
+        <svg viewBox="0 0 160 160" width="155" height="155">
+          <circle class="sr-t" cx="80" cy="80" r="70"/>
+          <circle class="sr-f" id="srf" cx="80" cy="80" r="70"/>
+        </svg>
+        <div class="stxt"><span class="spct" id="rpct">0%</span><span class="slbl">SCORE</span></div>
+      </div>
+      <div class="rtitle" id="rtitle">MISSION COMPLETE</div>
+      <div class="rsub" id="rsub">You completed all 232 Linux commands!</div>
+      <div class="rstats">
+        <div class="rsbox"><div class="rsval vg" id="rc">0</div><div class="rslbl">CORRECT</div></div>
+        <div class="rsbox"><div class="rsval vp" id="rw">0</div><div class="rslbl">WRONG</div></div>
+        <div class="rsbox"><div class="rsval vc" id="rt">232</div><div class="rslbl">TOTAL</div></div>
+      </div>
+      <button class="brst" onclick="restartQuiz()">↺ RESTART</button>
+      <button class="brev" onclick="showReview()">📋 REVIEW</button>
+    </div>
+  </div>
+
+  <!-- REVIEW -->
+  <div class="rvscreen" id="rvscreen">
+    <button class="bback" onclick="backToResult()">← BACK TO RESULTS</button>
+    <div id="rvlist"></div>
+  </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
